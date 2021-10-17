@@ -69,5 +69,4 @@ const PrevNextNav = styled.div`
   & > button:hover {
     cursor: pointer;
   }
-  }
 `;

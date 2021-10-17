@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect, Global, css, styled } from 'frontity';
+import { connect, Global, css, styled, Head } from 'frontity';
 import Link from '@frontity/components/link';
 import Switch from '@frontity/components/switch';
 
@@ -26,11 +26,18 @@ const Root = ({ state, actions }) => {
           }
         `}
       />
+      <Head>
+        <title>My First Frontity Theme</title>
+        <meta
+          name='description'
+          content='Based on the Frontity step by step tutorial'
+        />
+      </Head>
       <Header isPostType={data.isPostType} isPage={data.isPage}>
         <HeaderContent>
           <h1>Frontity Workshop</h1>
-          { state.theme.isUrlVisible
-            ? <>Current URL: {state.router.link} <Button onClick={actions.theme.toggleUrl}>&#x3c; Hide URL</Button></> 
+          {state.theme.isUrlVisible
+            ? <>Current URL: {state.router.link} <Button onClick={actions.theme.toggleUrl}>&#x3c; Hide URL</Button></>
             : <Button onClick={actions.theme.toggleUrl}>Show URL &#x3e;</Button>
           }
           <Menu>
@@ -61,7 +68,7 @@ const Header = styled.header`
   background-color: #e5edee;
   border-width: 0 0 8px 0;
   border-style: solid;
-  border-color: ${(props) => (props.isPostType ? ( props.isPage ? 'lightsteelblue' : 'lightseagreen') : 'maroon')};
+  border-color: ${(props) => (props.isPostType ? (props.isPage ? 'lightsteelblue' : 'lightseagreen') : 'maroon')};
 
   h1 {
     color: #4a4a4a;

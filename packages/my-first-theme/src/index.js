@@ -20,7 +20,7 @@ const myFirstTheme = {
   },
   libraries: {
     html2react: {
-      precessors: [link]
+      processors: [link]
     },
   },
 }

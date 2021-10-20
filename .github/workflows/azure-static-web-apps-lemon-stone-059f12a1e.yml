@@ -30,6 +30,8 @@ jobs:
           app_location: "/packages/my-first-theme" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "build" # Built app content directory - optional
+          
+          app_build_command: 'npx frontity dev'
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:

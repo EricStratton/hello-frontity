@@ -2,7 +2,7 @@ const settings = {
   "name": "hello-frontity",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
+      "url": "https://et-sites.com",
       "title": "Test Frontity Blog",
       "description": "WordPress installation for Frontity development"
     }
@@ -15,12 +15,12 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org",
+          "url": "https://et-sites.com",
           "postTypes": [
             {
-              type: "destinations",
-              endpoint: "destinations",
-              archive: "/destinations"
+              type: "post",
+              endpoint: "post",
+              archive: "/post"
             }
           ]
         }
